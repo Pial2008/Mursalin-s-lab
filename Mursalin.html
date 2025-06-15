@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mursalin's Periodic Table</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3faff;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 32px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 10px;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+    .element {
+      background: #3498db;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .element:hover {
+      transform: scale(1.1);
+      background: #1d6fa5;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌐 Mursalin's Periodic Table – All 118 Elements</h1>
+  <div class="grid" id="elements"></div>
+  <footer>Created by Mursalin | © 2025</footer>
+
+  <script>
+    const elements = [
+      "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne",
+      "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca",
+      "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn",
+      "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr",
+      "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn",
+      "Sb", "Te", "I", "Xe", "Cs", "Ba", "La", "Ce", "Pr", "Nd",
+      "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb",
+      "Lu", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg",
+      "Tl", "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Th",
+      "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm",
+      "Md", "No", "Lr", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds",
+      "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og"
+    ];
+    const container = document.getElementById("elements");
+    elements.forEach(el => {
+      const div = document.createElement("div");
+      div.className = "element";
+      div.innerText = el;
+      container.appendChild(div);
+    });
+  </script>
+
+</body>
+</html>
